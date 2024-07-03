@@ -119,10 +119,9 @@ GameObject:
   - component: {fileID: 3701833012599328574}
   - component: {fileID: 7453337959836370304}
   - component: {fileID: 4722009132424995000}
-  - component: {fileID: 4591635135056266977}
   - component: {fileID: 1572025053512188951}
   - component: {fileID: 8449940426193466379}
-  - component: {fileID: 6239829286299209237}
+  - component: {fileID: 4588977862728518486}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Interactable
@@ -268,27 +267,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!95 &4591635135056266977
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7031146811245625966}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1572025053512188951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 0
---- !u!114 &6239829286299209237
+--- !u!114 &4588977862728518486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,6 +302,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 7031146811245625966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a34fcade807417694efa72b2a950c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a569bab32fd468088618c3dba00159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: 1
+  navMeshAgent: {fileID: 4722009132424995000}
+  startWaitTime: 4
+  timeToRotate: 2
+  speedWalk: 3
+  speedRun: 5
+  viewRadius: 5
+  shootViewRadius: 10
+  viewAngle: 360
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  meshResolution: 1
+  edgeIterations: 4
+  edgeDistance: 0.5
+  attackRange: 1
+  shootRange: 10
+  attackCooldown: 1
+  hitEffect: {fileID: 0}
+  projectile: {fileID: 5174661227948539750, guid: eeb3b3ced78914f268390398ba98ddd1,
+    type: 3}
+  timeBetweenAttacks: 3
