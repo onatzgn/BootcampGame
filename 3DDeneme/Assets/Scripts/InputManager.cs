@@ -11,6 +11,12 @@ public class InputManager : MonoBehaviour
     private bool isGrounded = true;
     private bool canJump = true;
 
+    public Missions miss;
+
+    private void Awake()
+    {
+        miss = FindFirstObjectByType<Missions>();
+    }
     void Update()
     {
         float h = 0f;
@@ -43,13 +49,24 @@ public class InputManager : MonoBehaviour
         //SALDIRI İÇİN SAĞ TIK YAPTIRDIM
         IsAttacking = Input.GetMouseButtonDown(0);
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerWaterCheckLv1(other);
+    }
+
     public void SetGroundedState(bool grounded)
     {
         isGrounded = grounded;
         if (grounded)
         {
             canJump = true;
+        }
+    }
+    private void PlayerWaterCheckLv1(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("water"))
+        {
+            miss.GameOverVoid();
         }
     }
     
