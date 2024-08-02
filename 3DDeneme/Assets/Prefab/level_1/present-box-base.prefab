@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8836d7f4bc8f2479cda56208bfd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  award: {fileID: 3955328551518375109, guid: 7a06ed24279894d478c6a2dc04f99b6b, type: 3}
+  award: {fileID: 1246973915080248, guid: ed784d07f629e48a191a3bab51dd3015, type: 3}
   empty_prefab: {fileID: 3544336460160257635, guid: 680ebf4681018fd4b861d61d94eaf998,
     type: 3}
 --- !u!64 &3784744485157971045

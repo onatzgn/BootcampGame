@@ -55,10 +55,10 @@ public class TopDownCharacterMove : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
-    {
-        FollowWithCamera();
-    }
+    //private void LateUpdate()
+    //{
+    //    FollowWithCamera();
+    //}
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
@@ -76,14 +76,14 @@ public class TopDownCharacterMove : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, RotationSpeed * Time.deltaTime);
     }
 
-    private void FollowWithCamera()
-    {
-        if (Camera != null)
-        {
-            Vector3 targetPosition = transform.position + CameraOffset;
-            Camera.transform.position = Vector3.Lerp(Camera.transform.position, targetPosition, CameraFollowSpeed * Time.deltaTime);
-        }
-    }
+    //private void FollowWithCamera()
+    //{
+    //    if (Camera != null)
+    //    {
+    //        Vector3 targetPosition = transform.position + CameraOffset;
+    //        Camera.transform.position = Vector3.Lerp(Camera.transform.position, targetPosition, CameraFollowSpeed * Time.deltaTime);
+    //    }
+    //}
 
     private void ApplyJump()
     {

@@ -7,12 +7,19 @@ public class SurpriseBox : MonoBehaviour
     [SerializeField] private GameObject award;
     [SerializeField] private GameObject empty_prefab;
 
+    MissionStart mission;
+
+    private void Awake()
+    {
+        mission = FindFirstObjectByType<MissionStart>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             HandleCollision();
         }
+        
     }
 
     private void HandleCollision()
@@ -42,12 +49,14 @@ public class SurpriseBox : MonoBehaviour
 
         if (randomValue < 0.1f)
         {
+
             SurprizeBoxFunc();
         }
     }
 
     private void SurprizeBoxFunc()
     {
-        Instantiate(award, transform.position, Quaternion.identity);
+       GameObject test = Instantiate(award, transform.position, Quaternion.identity);
+       test.tag = "award";
     }
 }
